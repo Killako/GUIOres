@@ -1,4 +1,4 @@
 GUIOres
 =======
 
-GUI Ores is a mod that contains little surprises to the mining environment.
+GUI Ores is a mod that adds little surprises to the mining environment.
