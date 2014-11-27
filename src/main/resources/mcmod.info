@@ -1,0 +1,18 @@
+[
+{
+  "modid": "GUIOres",
+  "name": "GUI Ores",
+  "description": "GUI Ores is a mod that adds little surprises to the mining environment.",
+  "version": "1.7.2-1.0.0",
+  "credits": "To the amazing pahimar for his help with my modding.",
+  "logoFile": "",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "Killako" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": [
+	 "mod_MinecraftForge"
+]
+}
