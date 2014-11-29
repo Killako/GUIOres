@@ -1,14 +1,21 @@
 package com.killako.GUIOres.client.gui;
 
+import com.killako.GUIOres.handlers.ConfigurationHandler;
+import com.killako.GUIOres.reference.Reference;
 import cpw.mods.fml.client.config.GuiConfig;
-import cpw.mods.fml.client.config.IConfigElement;
 import net.minecraft.client.gui.GuiScreen;
-
-import java.util.List;
+import net.minecraftforge.common.config.ConfigElement;
+import net.minecraftforge.common.config.Configuration;
 
 public class ModGuiConfig extends GuiConfig
 {
-    public ModGuiConfig(GuiScreen parentScreen, List<IConfigElement> configElements, String modID, String configID, boolean allRequireWorldRestart, boolean allRequireMcRestart, String title) {
-        super(parentScreen, configElements, modID, configID, allRequireWorldRestart, allRequireMcRestart, title);
+    public ModGuiConfig(GuiScreen guiscreen)
+    {
+        super(guiscreen,
+                new ConfigElement(ConfigurationHandler.configuration.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
+                Reference.modid,
+                false,
+                false,
+                GuiConfig.getAbridgedConfigPath(ConfigurationHandler.configuration.toString()));
     }
 }

@@ -1,0 +1,115 @@
+---- Minecraft Crash Report ----
+// Why is it breaking :(
+
+Time: 11/29/14 4:04 PM
+Description: Unexpected error
+
+java.lang.StringIndexOutOfBoundsException: String index out of range: -3
+	at java.lang.String.substring(String.java:1911)
+	at com.killako.GUIOres.item.ItemGUIOres.getUnwrappedUnlocalizedName(ItemGUIOres.java:27)
+	at com.killako.GUIOres.item.ItemGUIOres.getUnlocalizedName(ItemGUIOres.java:22)
+	at net.minecraft.item.Item.getUnlocalizedNameInefficiently(Item.java:607)
+	at net.minecraft.item.Item.getItemStackDisplayName(Item.java:744)
+	at net.minecraft.item.ItemStack.getDisplayName(ItemStack.java:537)
+	at net.minecraftforge.client.GuiIngameForge.renderToolHightlight(GuiIngameForge.java:589)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:157)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1114)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1056)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:951)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78)
+	at GradleStart.main(GradleStart.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.lang.String.substring(String.java:1911)
+	at com.killako.GUIOres.item.ItemGUIOres.getUnwrappedUnlocalizedName(ItemGUIOres.java:27)
+	at com.killako.GUIOres.item.ItemGUIOres.getUnlocalizedName(ItemGUIOres.java:22)
+	at net.minecraft.item.Item.getUnlocalizedNameInefficiently(Item.java:607)
+	at net.minecraft.item.Item.getItemStackDisplayName(Item.java:744)
+	at net.minecraft.item.ItemStack.getDisplayName(ItemStack.java:537)
+	at net.minecraftforge.client.GuiIngameForge.renderToolHightlight(GuiIngameForge.java:589)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:157)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player492'/26, l='MpServer', x=595.50, y=5.62, z=88.50]]
+	Chunk stats: MultiplayerChunkCache: 614, 614
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (598,4,79), Chunk: (at 6,0,15 in 37,4; contains blocks 592,0,64 to 607,255,79), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 650 game time, 650 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 109 total; [EntityClientPlayerMP['Player492'/26, l='MpServer', x=595.50, y=5.62, z=88.50], EntitySlime['Slime'/1, l='MpServer', x=560.59, y=4.00, z=64.56], EntitySlime['Slime'/2, l='MpServer', x=543.75, y=4.00, z=94.37], EntitySlime['Slime'/3, l='MpServer', x=558.71, y=4.00, z=110.87], EntitySlime['Slime'/4, l='MpServer', x=558.56, y=4.00, z=123.16], EntitySlime['Slime'/5, l='MpServer', x=575.57, y=4.00, z=55.47], EntitySlime['Slime'/6, l='MpServer', x=564.39, y=4.00, z=62.65], EntitySlime['Slime'/7, l='MpServer', x=554.65, y=5.06, z=133.02], EntitySlime['Slime'/8, l='MpServer', x=584.03, y=5.00, z=145.92], EntitySlime['Slime'/9, l='MpServer', x=574.71, y=4.00, z=143.76], EntitySlime['Slime'/10, l='MpServer', x=568.63, y=4.69, z=141.42], EntitySlime['Slime'/11, l='MpServer', x=559.69, y=4.00, z=162.25], EntitySlime['Slime'/8812, l='MpServer', x=553.40, y=4.33, z=115.36], EntitySlime['Slime'/12, l='MpServer', x=569.18, y=4.00, z=144.67], EntitySlime['Slime'/13, l='MpServer', x=618.81, y=4.00, z=109.72], EntitySlime['Slime'/14, l='MpServer', x=608.55, y=5.00, z=135.87], EntitySlime['Slime'/15, l='MpServer', x=611.99, y=4.60, z=132.38], EntitySlime['Slime'/17, l='MpServer', x=619.19, y=4.00, z=121.56], EntityCow['Cow'/1896, l='MpServer', x=666.22, y=4.00, z=83.91], EntitySlime['Slime'/16, l='MpServer', x=606.00, y=4.00, z=133.49], EntityCow['Cow'/1897, l='MpServer', x=617.50, y=4.00, z=63.50], EntityCow['Cow'/1898, l='MpServer', x=615.50, y=4.00, z=62.50], EntityChicken['Chicken'/1899, l='MpServer', x=615.50, y=4.00, z=61.50], EntityChicken['Chicken'/1889, l='MpServer', x=665.34, y=4.00, z=87.97], EntityChicken['Chicken'/1890, l='MpServer', x=663.50, y=4.00, z=91.50], EntityChicken['Chicken'/1891, l='MpServer', x=667.47, y=4.00, z=82.56], EntityChicken['Chicken'/1892, l='MpServer', x=663.50, y=4.00, z=87.50], EntityCow['Cow'/1893, l='MpServer', x=669.81, y=4.00, z=90.50], EntityCow['Cow'/1894, l='MpServer', x=667.34, y=4.00, z=87.41], EntityCow['Cow'/1895, l='MpServer', x=668.50, y=4.00, z=84.50], EntityPig['Pig'/1887, l='MpServer', x=674.50, y=4.00, z=82.50], EntityPig['Pig'/1886, l='MpServer', x=672.50, y=4.00, z=86.50], EntityPig['Pig'/1885, l='MpServer', x=668.22, y=4.00, z=90.50], EntitySlime['Slime'/76266, l='MpServer', x=626.94, y=4.00, z=136.66], EntitySlime['Slime'/52326, l='MpServer', x=574.83, y=4.00, z=70.29], EntitySlime['Slime'/80784, l='MpServer', x=570.89, y=4.69, z=55.72], EntitySlime['Slime'/29588, l='MpServer', x=551.06, y=4.85, z=124.96], EntitySlime['Slime'/59398, l='MpServer', x=536.60, y=4.00, z=67.47], EntitySlime['Slime'/57134, l='MpServer', x=655.85, y=4.81, z=71.77], EntitySlime['Slime'/54007, l='MpServer', x=605.79, y=4.00, z=116.61], EntityPig['Pig'/2032, l='MpServer', x=621.50, y=4.00, z=115.50], EntityChicken['Chicken'/2033, l='MpServer', x=538.50, y=4.00, z=168.50], EntityChicken['Chicken'/2034, l='MpServer', x=540.50, y=4.00, z=167.50], EntityChicken['Chicken'/2035, l='MpServer', x=543.38, y=4.00, z=163.34], EntityChicken['Chicken'/2036, l='MpServer', x=541.59, y=4.00, z=163.41], EntitySheep['Sheep'/2037, l='MpServer', x=535.31, y=4.00, z=167.09], EntitySheep['Sheep'/2038, l='MpServer', x=536.97, y=4.00, z=165.50], EntitySheep['Sheep'/2039, l='MpServer', x=538.25, y=4.00, z=165.31], EntitySheep['Sheep'/2040, l='MpServer', x=543.50, y=4.00, z=164.50], EntityPig['Pig'/2041, l='MpServer', x=534.69, y=4.00, z=170.06], EntityPig['Pig'/2043, l='MpServer', x=540.19, y=4.00, z=161.81], EntityPig['Pig'/2044, l='MpServer', x=534.03, y=4.00, z=161.13], EntitySlime['Slime'/68409, l='MpServer', x=590.34, y=4.00, z=158.28], EntitySlime['Slime'/1226, l='MpServer', x=630.59, y=4.85, z=145.75], EntityPig['Pig'/2021, l='MpServer', x=614.78, y=4.00, z=115.09], EntityPig['Pig'/2023, l='MpServer', x=615.66, y=4.00, z=120.19], EntityPig['Pig'/2022, l='MpServer', x=606.94, y=4.00, z=123.03], EntityCow['Cow'/2025, l='MpServer', x=610.50, y=4.00, z=111.38], EntityPig['Pig'/2024, l='MpServer', x=616.88, y=4.00, z=119.84], EntityCow['Cow'/2027, l='MpServer', x=608.50, y=4.00, z=111.71], EntityCow['Cow'/2026, l='MpServer', x=607.13, y=4.00, z=119.97], EntitySlime['Slime'/46739, l='MpServer', x=560.53, y=4.00, z=117.47], EntityPig['Pig'/2029, l='MpServer', x=614.16, y=4.00, z=113.91], EntityCow['Cow'/2028, l='MpServer', x=610.72, y=4.00, z=114.47], EntityPig['Pig'/2031, l='MpServer', x=614.13, y=4.00, z=118.31], EntityPig['Pig'/2030, l='MpServer', x=606.19, y=4.00, z=113.44], EntityHorse['Horse'/2002, l='MpServer', x=524.50, y=4.00, z=54.50], EntityHorse['Horse'/2003, l='MpServer', x=527.13, y=4.00, z=55.13], EntitySheep['Sheep'/2000, l='MpServer', x=519.81, y=4.00, z=57.19], EntityHorse['Horse'/2007, l='MpServer', x=525.50, y=4.00, z=57.50], EntityHorse['Horse'/2004, l='MpServer', x=524.50, y=4.00, z=52.50], EntityHorse['Horse'/2005, l='MpServer', x=522.34, y=4.00, z=61.66], EntitySlime['Slime'/4769, l='MpServer', x=550.22, y=4.00, z=86.64], EntitySlime['Slime'/51015, l='MpServer', x=644.66, y=4.62, z=158.37], EntityHorse['Horse'/1984, l='MpServer', x=588.06, y=4.00, z=143.63], EntityChicken['Chicken'/1995, l='MpServer', x=516.50, y=4.00, z=104.50], EntityChicken['Chicken'/1994, l='MpServer', x=516.50, y=4.00, z=100.50], EntitySheep['Sheep'/1998, l='MpServer', x=518.22, y=4.00, z=58.78], EntitySheep['Sheep'/1997, l='MpServer', x=522.50, y=4.00, z=58.50], EntityHorse['Horse'/1973, l='MpServer', x=590.38, y=4.00, z=144.59], EntityHorse['Horse'/1974, l='MpServer', x=592.50, y=4.00, z=140.50], EntityHorse['Horse'/1975, l='MpServer', x=591.34, y=4.00, z=129.91], EntityHorse['Horse'/1980, l='MpServer', x=601.94, y=4.00, z=141.78], EntityHorse['Horse'/1977, l='MpServer', x=594.41, y=4.00, z=137.56], EntityHorse['Horse'/1979, l='MpServer', x=593.50, y=4.00, z=130.13], EntityPig['Pig'/1957, l='MpServer', x=632.09, y=4.00, z=132.38], EntityChicken['Chicken'/1956, l='MpServer', x=636.50, y=4.00, z=130.50], EntityPig['Pig'/1959, l='MpServer', x=621.50, y=4.00, z=130.50], EntityPig['Pig'/1958, l='MpServer', x=631.66, y=4.00, z=131.22], EntityChicken['Chicken'/1953, l='MpServer', x=632.59, y=4.00, z=130.41], EntitySheep['Sheep'/1952, l='MpServer', x=634.50, y=4.00, z=131.50], EntityChicken['Chicken'/1955, l='MpServer', x=635.50, y=4.00, z=131.50], EntityChicken['Chicken'/1954, l='MpServer', x=633.50, y=4.00, z=134.50], EntityPig['Pig'/1960, l='MpServer', x=616.50, y=4.00, z=127.50], EntityPig['Pig'/1943, l='MpServer', x=545.47, y=4.00, z=167.59], EntityPig['Pig'/1940, l='MpServer', x=551.50, y=4.00, z=164.50], EntityPig['Pig'/1941, l='MpServer', x=548.50, y=4.00, z=161.50], EntityPig['Pig'/1938, l='MpServer', x=547.84, y=4.00, z=166.91], EntityPig['Pig'/1939, l='MpServer', x=549.50, y=4.00, z=164.50], EntityPig['Pig'/1937, l='MpServer', x=546.09, y=4.00, z=166.34], EntitySheep['Sheep'/1950, l='MpServer', x=638.50, y=4.00, z=128.50], EntitySlime['Slime'/705, l='MpServer', x=570.44, y=4.00, z=68.78], EntitySheep['Sheep'/1951, l='MpServer', x=633.50, y=4.00, z=129.50], EntityPig['Pig'/1948, l='MpServer', x=540.69, y=4.00, z=164.31], EntitySheep['Sheep'/1949, l='MpServer', x=636.50, y=4.00, z=128.50], EntityPig['Pig'/1946, l='MpServer', x=547.41, y=4.00, z=165.69], EntityPig['Pig'/1947, l='MpServer', x=538.50, y=4.00, z=161.50], EntityPig['Pig'/1944, l='MpServer', x=541.50, y=4.00, z=167.50], EntityPig['Pig'/1945, l='MpServer', x=545.50, y=4.00, z=158.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2555)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:980)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:78)
+	at GradleStart.main(GradleStart.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.7.0_67, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 697403168 bytes (665 MB) / 1038876672 bytes (990 MB) up to 1038876672 bytes (990 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.85.1230 Minecraft Forge 10.13.2.1230 4 mods loaded, 4 mods active
+	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.10.85.1230} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.2.1230.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.13.2.1230} [Minecraft Forge] (forgeSrc-1.7.10-10.13.2.1230.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	GUIOres{1.7.2-1.0.0} [GUI Ores] (GUIOres) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: AMD Radeon HD 6800 Series GL version 4.4.13084 Compatibility Profile Context 14.301.1001.0, ATI Technologies Inc.
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

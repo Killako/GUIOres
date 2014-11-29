@@ -1,10 +1,10 @@
 package com.killako.GUIOres.client.gui;
 
-import cpw.mods.fml.client.IModGuiFactory;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiScreen;
+        import cpw.mods.fml.client.IModGuiFactory;
+        import net.minecraft.client.Minecraft;
+        import net.minecraft.client.gui.GuiScreen;
 
-import java.util.Set;
+        import java.util.Set;
 
 public class GuiFactory implements IModGuiFactory
 {
@@ -18,7 +18,7 @@ public class GuiFactory implements IModGuiFactory
     @Override
     public Class<? extends GuiScreen> mainConfigGuiClass()
     {
-        return null;
+        return ModGuiConfig.class;
     }
 
     @Override
