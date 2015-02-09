@@ -1,6 +1,7 @@
 package com.killako.GUIOres;
 
 import com.killako.GUIOres.handlers.ConfigurationHandler;
+import com.killako.GUIOres.init.ModBlocks;
 import com.killako.GUIOres.init.ModItems;
 import com.killako.GUIOres.proxies.IProxy;
 import com.killako.GUIOres.reference.Reference;
@@ -29,6 +30,8 @@ public class GUIOres
         LogHelper.info("PreInit");
 
         ModItems.init();
+
+        ModBlocks.init();
     }
 
     @Mod.EventHandler
